@@ -1,22 +1,35 @@
 import 'animal.dart';
 import 'plants.dart';
-
-void main() {
-  //var nama objek = namaClass(Properties)
-  var Rizkycat = Animal('Rizky', 4.2, 'blue');
-
-  // var Rizkyrose = Plants('Rose ', 'Rose', 'pink');
-  //kalau tanpa constructor, kita harus mengisi property satu persatu
-  // var Rizkycat = Animal();
-  // Rizkyrose.name = 'Rose';
-  // Rizkycat.weight = 4.2;
-  // Rizkycat.color = 'blue';
-
-  Rizkycat.eat();
-  print(Rizkycat.weight);
-
+ 
+void main(List<String> args) {
+  // var namaObjek = namaClass(properties/paramter)
+ 
+  // cascade notation ditandai dengan ..
+  var ucupCat = Animal('Ucup Guerero', 'Orange', 4.2)
+    ..eat()
+    ..poop()
+    ..sleep()
+    ..color = "Blue";
+  ;
+ 
+ 
+ 
+  // var ucupRose = Plants('Rose', 'Rose Red', 'Red');
+  // kalau tanpa constructor =>
+  // ucupRose.name = 'Rose';
+  // ucupRose.latinName = 'Rose Red';
+  // ucupRose.color = 'Red';
+ 
+  ucupCat.eat();
+  print(ucupCat.weight.toStringAsFixed(1));
+ 
   var plants = Plants('Rose', 'Rose Red', 'Red');
   var plants1 = Plants.name('Rose');
   var plants2 = Plants.latinName('Rose Red');
   var plants3 = Plants.color('Red');
+ 
+  /**
+   * properties & methods
+   * constructor
+   */
 }
