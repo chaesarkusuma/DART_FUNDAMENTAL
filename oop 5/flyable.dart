@@ -1,0 +1,5 @@
+class Flyable {
+  fly(){
+    print('');
+  }
+}
